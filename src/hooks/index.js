@@ -23,7 +23,7 @@ export const useTasks = selectedProject => {
             moment().format('DD/MM/YYYY')
           ))
         : selectedProject === 'INBOX' || selectedProject === 0
-        ? (unsubscribe = unsubscribe.where('date', '==', ''))
+        ? (unsubscribe = unsubscribe.where('userId', '==', 'mahsinsaif'))
         : unsubscribe;
 
     unsubscribe = unsubscribe.onSnapshot(snapshot => {
